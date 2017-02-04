@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.hippoedit.com/xml/package-info">
+<package-info xmlns="http://www.hippoedit.com/xml/package-info" xmlns:smf="http://www.hippoedit.com/">
+	<id>5B252184-2714-4E42-B9E4-2352C704DDAE</id>
+	<name>ShortKeys</name>
+	<version>1.0.0.2</version>
+	<description>ShortKeys extensions for HippoEDIT</description>
+	<author>HippoEDIT.com</author>
+	<email>supportbox@hippoedit.com</email>
+	<homepage>http://wiki.hippoedit.com/plugins/shortkeys</homepage>
+	<memo></memo>
+
+	<!-- Common Install actions -->
+	<install>
+		<!-- Read me -->
+		<readme type="inline">This will install ShortKeys plugin for HippoEDIT.</readme>
+
+		<require-file name="shortkeys.hejs" destination="%{plugins}%/shortkeys.hejs" />
+
+		<!-- Registration -->
+		<install-plugin path="%{plugins}%/shortkeys.hejs"/>
+	</install>
+
+	<!-- Uninstall actions -->
+	<uninstall>
+		<!-- Read me -->
+		<readme type="inline">This will uninstall ShortKeys plugin for HippoEDIT.</readme>
+
+		<!-- Un-Registration -->
+		<uninstall-plugin id="5B252184-2714-4E42-B9E4-2352C704DDAE"/>
+
+		<!-- Source files -->
+		<remove-file name="%{plugins}%/shortkeys.hejs" />
+	</uninstall>
+
+</package-info>
